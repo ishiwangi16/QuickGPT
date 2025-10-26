@@ -1,26 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *)); 
 
-*{
-   font-family: "Outfit", sans-serif;
-}
-@theme {
-  --color-primary: #E6CCFF;
-}
-::-webkit-scrollbar {
-    display: none;
+* {
+  font-family: "Outfit", sans-serif;
 }
 
-.reset-tw :not(pre):not(code){
+/* 🌈 Updated color palette */
+@theme {
+  --color-primary: #A78BFA; /* Soft purple accent */
+  --color-secondary: #FDE68A; /* Light warm yellow */
+  --color-accent: #34D399; /* Soft green for highlights */
+  --color-background: #F9FAFB; /* Neutral light bg */
+  --color-text: #1F2937; /* Deep gray text */
+}
+
+/* 🌙 Dark mode adjustments */
+.dark {
+  --color-primary: #C4B5FD; 
+  --color-secondary: #FBBF24;
+  --color-accent: #10B981;
+  --color-background: #111827;
+  --color-text: #F9FAFB;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.reset-tw :not(pre):not(code) {
   all: revert;
 }
 
-.loader div:nth-child(2){
+/* Loader animation remains unchanged */
+.loader div:nth-child(2) {
   animation-delay: 0.2s;
 }
-.loader div:nth-child(3){
+.loader div:nth-child(3) {
   animation-delay: 0.4s;
 }
